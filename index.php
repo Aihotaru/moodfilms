@@ -21,8 +21,7 @@
     <?php
 
     $mysqli = new mysqli("127.0.0.1", "root", "fuckYOU", "movies", 3305);
-
-            mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+//            mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     $sql = 'SELECT films.name, films.genre, tags.name as tag, films.img, films.id FROM films INNER JOIN tags ON films.tag=tags.id';
     $result = mysqli_query($mysqli, $sql);
 
@@ -60,8 +59,6 @@
                          <button class="btn btn-outline-info mr-2 show" type="submit" name="submit" id="search_handler" data-toggle="modal" data-target="#search_result"></button>
                     </form>
                 </div>
-
-
             </div>
             <div class="">
                 <a href="index.php">
@@ -171,8 +168,6 @@
             </div>
         </div>
     </div>
-
-
     <div class="container" >
         <div class="row " id="Container">
             <div class="backNav hidding">
@@ -187,119 +182,28 @@
             </div>
             <?php
 
-
             while ($row = mysqli_fetch_assoc($result)) {
                 echo '
                     <div class=" col mix f' . $row['tag']  . '" >
-                        <div class="card" style="height: 35rem;">
-                            <img src=" ' . $row['img'] .' " class="card-img-top" style="height: 25rem;">
+                        <div class="card" >
+                            <img src=" ' . $row['img'] .' " class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">' . $row['name']. ' </h5>
                                 <p class="genre">' . $row['genre'] . '</p>
                                 <div class="tag ' . $row['tag'] . '" title="' . $row['tag'] . '"> </div>
                             </div>
-                            <button class="del_but" id="del_action" type="button"  name="' . $row['id'] . '" index="' . $row['id'] . '">Удалить</button>
+                            <button class="del_but" id="del_action" type="button"  index="' . $row['id'] . '">Удалить</button>
                        </div>
                     </div>
            ';
             }
+
             ?>
 
         </div>
-
-
-
     </div>
-
-    <script>
-        $(function(){
-            $('#Container').mixItUp();
-        });
-    </script>
-    <script>
-        $("#icon_events_header").click(function(){
-            $("#content-php").load("random.php");
-        });
-    </script>
-    <script>
-        function viewDiv(){
-            document.getElementById("div1").style.display = "block";
-        }
-    </script>
-     <script>
-         $(document).ready(function(){
-             $("#searchForm").submit(function(event){
-                 submitForm();
-                 return false;
-             });
-         });
-         function submitForm(){
-             $.ajax({
-                 type: "POST",
-                 url: "search.php",
-                 cache:false,
-                 data: $('form#searchForm').serialize(),
-                 success: function(response){
-                     $("#search-content").html(response);
-                 },
-                 error: function(){
-                     alert("Error");
-                 }
-             });
-         }
-    </script>
-    <script>
-        $(document).ready(function(){
-            $("#add_form").submit(function(event){
-                submitFormAdd();
-                return false;
-            });
-        });
-        function submitFormAdd(){
-            var form = $("#add_form")[0];
-            var formdata = new FormData(form);
-            $.ajax({
-                type:'POST',
-                //method:'post',
-                url: "add.php",
-                cache:false,
-                data: formdata,
-                processData: false,
-                contentType: false,
-                success: function(){
-                    window.location.reload();
-                }
-            });
-        }
-    </script>
-    <script>
-
-        $(document).ready(function()
-        {
-            $(".del_but").click(function()
-            {
-                var deleteIndex = $(this).attr('index');
-                var datadel = $( "#del_action" ).serialize();
-
-                $.ajax
-                ({
-                    type: "POST",
-                    url: "delete.php",
-                    data: datadel + '&deletion=' + deleteIndex,
-                    cache: false,
-                    success: function(html)
-                    {
-                        location.reload();
-                    }
-                });
-
-            });
-        });
-
-
-    </script>
     <script src="app/js/jquery.mixitup.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"type="text/javascript"></script>
-    <script src="app/js/back.js" type="text/javascript"></script>
+    <script src="app/js/functional.js" type="text/javascript"></script>
 </body>
 </html>
