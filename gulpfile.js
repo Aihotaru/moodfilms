@@ -9,7 +9,7 @@ gulp.task('styl', function(){ // Создаем таск stylus
             use: [nib()]
         })) // Преобразуем stylus в CSS посредством gulp-stylus
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
-        .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+        .pipe(browserSync.reload({stream: true})); // Обновляем CSS на странице при изменении
 });
 gulp.task('php', function(){
     return gulp.src('*.php')
@@ -27,5 +27,5 @@ gulp.task('php', function(){
 
 gulp.task('watch', gulp.series('styl', function() {
     gulp.watch('stylus/*.styl', gulp.series('styl')); // Наблюдение за stylus файлами
-    gulp.watch('index.php', gulp.series('php'));// Наблюдение за другими типами файлов
+    gulp.watch('*.php', gulp.series('php'));// Наблюдение за другими типами файлов
 }));

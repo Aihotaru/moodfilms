@@ -26,7 +26,7 @@
     $result = mysqli_query($mysqli, $sql);
 
     ?>
-    <nav class="navbar navbar-light bg-ligh">
+    <nav class="navbar navbar-light bg-ligh ">
         <div class="container-fluid justify-content">
             <div>
                 <button class="btn btn-outline-info mr-2 show" type="button" title="Filter" data-toggle="modal" data-target="#filters">
@@ -69,42 +69,50 @@
         <!-- Modal for filters -->
         <div class="modal fade" id="filters" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content card-font">
                     <button type="button" data-filter=".fchristmas" class="filter">
                         <img src="app/img/christmas-tree.png">
+                        Christmas mood, happiness, Christmas tree
                     </button>
                     <button type="button" data-filter=".flove" class="filter">
-                        <img src="app/img/love.png">
+                        <img src="app/img/love.png" >
+                        Beloved movies of all the times
                     </button>
                     <button type="button" data-filter=".fsport" class="filter">
                         <img src="app/img/dumbbell.png">
+                        Motivation for sport
                     </button>
                     <button type="button" data-filter=".fself-education" class="filter">
                         <img src="app/img/graduation-cap.png">
+                        Self-education inspiration
                     </button>
                     <button type="button" data-filter=".ftears" class="filter">
                         <img src="app/img/tear.png">
+                        Beautiful, sad movies
                     </button>
                     <button type="button" data-filter=".fmiracle" class="filter">
                         <img src="app/img/magic-wand.png">
+                        Movies that give me magical sensations
+                    </button>
+                    <button type="button" data-filter=".fvampire" class="filter">
+                        <img src="app/img/vampire.png">
+                        Movies that have mystic aura
                     </button>
                 </div>
             </div>
         </div>
         <!-- Modal for random -->
         <div class="modal fade" id="random" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
+            <div class="modal-dialog card-font">
+                <div class="modal-content ">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Random movie</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body"><div id="content-php"></div></div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="modal-body center-block">
+                        <div id="content-php" ></div>
                     </div>
                 </div>
             </div>
@@ -120,12 +128,8 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body center-block">
                     <div id="search-content"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -155,6 +159,7 @@
                             <option value="4">miracle</option>
                             <option value="5">tears</option>
                             <option value="6">love</option>
+                            <option value="7">vampire</option>
                         </select>
                         <label for="add_image" class="form-label">Image:</label>
                         <input class="form-control" type="file" id="add_image"  name="add-image">

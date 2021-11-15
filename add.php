@@ -2,8 +2,8 @@
 $title_value = $_POST["add-title"];
 $genre_value = $_POST["add-genre"];
 $tag_value = $_POST["add-tag"];
-$path = "app/img/" . $_FILES["add-image"]["name"];
-$target_path = __DIR__ . '/app/img/';
+$path = "app/img/movies/" . $_FILES["add-image"]["name"];
+$target_path = __DIR__ . '/app/img/movies/';
 $target_path = $target_path . basename( $_FILES['add-image']['name']);
 move_uploaded_file($_FILES['add-image']['tmp_name'], $target_path);
 

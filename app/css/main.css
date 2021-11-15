@@ -102,13 +102,26 @@ body {
   margin-top: 5rem !important;
 }
 .card {
-  background-color: #979698 !important;
+  background-color: #232626 !important;
   width: 20rem;
+  height: 38rem;
   float: left;
   margin-bottom: 2rem;
+  border-color: #3a3f40 !important;
 }
 .card-title {
   font-family: Appetite;
+}
+.card-body {
+  color: #98859e;
+}
+.card-img-top {
+  height: 25rem;
+}
+.del_but {
+  background-color: #98859e;
+  border-radius: 3px;
+  border: none;
 }
 .tag {
   width: 32px;
@@ -132,6 +145,12 @@ body {
 .christmas {
   background-image: url("../img/christmas-tree.png");
 }
+.vampire {
+  background-image: url("../img/vampire.png");
+}
+.filter {
+  background-color: #ab98b1;
+}
 #Container .mix {
   display: none;
 }
@@ -143,4 +162,16 @@ body {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
+}
+.modal-content {
+  background-color: rgba(152,133,158,0.71) !important;
+}
+.center-block {
+  margin: auto;
+}
+.card-font {
+  font-family: Appetite;
+}
+.modal-header {
+  border-color: #373738 !important;
 }

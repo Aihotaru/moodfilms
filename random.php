@@ -9,7 +9,7 @@
     $row = mysqli_fetch_assoc($result);
     echo '
                     <div class=" col mix f' . $row['tag']  . '" >
-                        <div class="card" style="height: 35rem;">
+                        <div class="card"  >
                             <img src=" ' . $row['img'] .' " class="card-img-top" style="height: 25rem;">
                             <div class="card-body">
                                 <h5 class="card-title">' . $row['name']. ' </h5>
