@@ -95,6 +95,10 @@ body {
 .navbar {
   background-color: rgba(71,71,71,0.36);
 }
+.but-nav {
+  color: #b3a3d1 !important;
+  border-color: #b3a3d1 !important;
+}
 .logo {
   width: 100%;
 }
@@ -104,7 +108,7 @@ body {
 .card {
   background-color: #232626 !important;
   width: 20rem;
-  height: 38rem;
+  height: 35rem;
   float: left;
   margin-bottom: 2rem;
   border-color: #3a3f40 !important;
@@ -116,7 +120,7 @@ body {
   color: #98859e;
 }
 .card-img-top {
-  height: 25rem;
+  height: 20rem;
 }
 .del_but {
   background-color: #98859e;
@@ -149,7 +153,8 @@ body {
   background-image: url("../img/vampire.png");
 }
 .filter {
-  background-color: #ab98b1;
+  background-color: #4e4454;
+  color: #c1c1c1;
 }
 #Container .mix {
   display: none;
@@ -174,4 +179,14 @@ body {
 }
 .modal-header {
   border-color: #373738 !important;
+}
+.add_button {
+  width: 9rem;
+  height: 3rem;
+  background-color: #c1c1c1 !important;
+  margin: 2rem auto;
+}
+.form-control,
+.form-select {
+  background-color: #c1c1c1 !important;
 }
