@@ -12,10 +12,9 @@ $(".hide").on("click", function(){
 });
 
 //Search button
-
-function viewDiv(){
-    document.getElementById("div1").style.display = "block";
-}
+$("#search").click(function() {
+    $("#div1").toggle();
+});
 
 $(document).ready(function(){
     $("#searchForm").submit(function(event){
@@ -77,7 +76,7 @@ $(document).ready(function()
             url: "delete.php",
             data: datadel + '&deletion=' + deleteIndex,
             cache: false,
-            success: function(html)
+            success: function()
             {
                 location.reload();
             }

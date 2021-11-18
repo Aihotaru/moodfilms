@@ -42,23 +42,24 @@
                     </svg>
                 </button>
 
-                <button class="btn btn-outline-info mr-2 but-nav" id="search" type="button" title="Search" value="Click" onmousedown="viewDiv()">
+                <button class="btn btn-outline-info mr-2 show but-nav" id="search" type="button" title="Search" >
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
                 </button>
-                <button class="btn btn-outline-info mr-2 but-nav" id="" type="button" title="Add" data-toggle="modal" data-target="#adding">
+                <button class="btn btn-outline-info mr-2 but-nav" id="search" type="button" title="Add" data-toggle="modal" data-target="#adding">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                     </svg>
                 </button>
-                <div id="div1">
-                    <form id="searchForm" role="form">
-                         <input type="text" name="search" id="search_content" class="form-control">
-                         <button class="btn btn-outline-info mr-2 show but-nav form" type="submit" name="submit" id="search_handler" data-toggle="modal" data-target="#search_result">Find</button>
-                    </form>
-                </div>
+
+            </div>
+            <div id="div1">
+                <form id="searchForm" role="form" >
+                    <input type="text" name="search" id="search_content" class="form-control">
+                    <button class="btn btn-outline-info mr-2 show but-nav form" type="submit" name="submit" id="search_handler" data-toggle="modal" data-target="#search_result">Find</button>
+                </form>
             </div>
             <div class="">
                 <a href="index.php">
@@ -123,7 +124,7 @@
         <div class="modal-dialog">
             <div class="modal-content card-font">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Found movies</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
